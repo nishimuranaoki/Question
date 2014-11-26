@@ -8,3 +8,4 @@ class IfTest2 {
    }
    System.out.println("This runs no matter what");
   }
+}
