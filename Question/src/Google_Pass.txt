@@ -1,0 +1,14 @@
+nishimuranaoki010@gmail.com
+nsmrnaoki
+
+êVÅFbrainnet
+brainnet
+brainnet
+
+
+com.google.appengine.tools.admin.ClientLoginServerConnection$ClientLoginExceptio
+n: Email "nishimuranaoki010@gmail.com" and password do not match.
+Unable to update app: Email "nishimuranaoki010@gmail.com" and password do not ma
+tch.
+Please see the logs [C:\Users\Owner\AppData\Local\Temp\appcfg1700430232283984933
+.log] for further information.

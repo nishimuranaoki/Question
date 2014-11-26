@@ -1,0 +1,224 @@
+mysql -uroot -p　　//mysqlに変える。
+
+create table drink_info
+( drink_name varchar(20),
+cost dec(2,1),
+carbs dec(3,1),
+color varchar(3),
+ice char(1),
+calories int
+)
+
+insert into drink_info
+(drink_name,cost,carbs,color,ice,calories)
+
+values
+('ブラックソーン',3,8.4,'黄','Y',35),
+
+('ブルームーン',2.5,3.2,'青','Y',12),
+
+('オーマイゴッシュ',3.5,8.6,'橙','Y',35),
+
+('ライムフィズ',2.5,5.4,'緑','Y',24),
+
+('キスオンザリップ',5.5,42.5,'紫','Y',171),
+
+('ホットゴールド',3.2,32.1,'橙','N',135),
+
+('ローンツリー',3.6,4.2,'赤','Y',17),
+
+('グレイハウンド',4,14,'黄','Y',50),
+
+('インディアンサマー',2.8,7.2,'茶','N',30),
+
+('ブルフロッグ',2.6,21.5,'黄褐色','Y',80),
+
+('ソーダアンドイット',3.8,4.7,'赤','N',19);
+
+
+
+
+
+select drink_name from drink_info
+where
+calories >= 30
+and
+calories <= 60;
+
+
+
+select drink_name from drink_info
+where
+calories between 30 and 60;
+
+
+
+
+select drink_name,calories from drink_info
+where
+calories >= 30
+and
+calories <= 60;
+
+
+
+select drink_name from drink_info
+where
+drink_name between'オ%'and'グ%';
+
+
+insert into drink_info
+(drink_name,cost,carbs,color,ice,calories)
+
+values
+('ブラックソーン',3,8.4,'黄','Y',35),
+
+('ブルームーン',2.5,3.2,'青','Y',12),
+
+('オーマイゴッシュ',3.5,8.6,'橙','Y',35),
+
+('ライムフィズ',2.5,5.4,'緑','Y',24),
+
+('キスオンザリップ',5.5,42.5,'紫','Y',171),
+
+('ホットゴールド',3.2,32.1,'橙','N',135),
+
+('ローンツリー',3.6,4.2,'赤','Y',17),
+
+('グレイハウンド',4,14,'黄','Y',50),
+
+('インディアンサマー',2.8,7.2,'茶','N',30),
+
+('ブルフロッグ',2.6,21.5,'黄褐色','Y',80),
+
+('ソーダアンドイット',3.8,4.7,'赤','N',19);
+
+
+
+
+
+
+
+create table black_book
+(date_name varchar(20),
+rating varchar(20));
+
+insert into black_book
+(date_name,rating)
+
+values
+('アレックス','斬新'),
+
+('ジェームス','退屈'),
+
+('イアン','驚くべき'),
+
+('ボリス','つまらない'),
+
+('メルビン','下層階級'),
+
+('エリック','情けない'),
+
+('アンソニー','楽しい'),
+
+('サミー','かなりいい'),
+
+('イヴァン','陰気'),
+
+('ヴィック','話にならない');
+
+select date_name
+from black_book
+where
+rating <>('斬新','驚くべき','楽しい','かなりいい');
+
+
+
+select drink_name 
+from easy_drinks 
+where not amount1 < 1.50;
+
+select drink_name 
+from easy_drinks 
+where amount1 >= 1.50;
+
+
+select drink_name 
+from drink_info 
+where not ice = 'Y';
+
+select drink_name 
+from drink_info 
+where ice = 'N';
+
+
+select drink_name 
+from drink_info 
+where ice <> 'Y';
+
+<>
+create database clown;
+use clown;
+
+create table clown_info
+(name varchar(20),
+last_seen varchar(50),
+appearance blob,
+activities varchar(50)
+);
+
+insert into clown_info
+
+  value('エルシー','チェリーヒル・シニアセンター','女性、赤い髪、緑のドレス、巨大な足','ゴム風船、小さな車'),
+('ピックルズ','ジャック、グリーンのパーティ','男性、オレンジの髪、青いスーツ、巨大な足','パントマイム'),
+('スナッグルズ','ディクソンパーク','女性、黄色いシャツ、赤いバギーパンツ','ホルン、傘'),
+('ミスター・ホボ','オークランド病院','男性、青い髪、赤いスーツ、巨大な鼻','ゴム風船'),
+('クララベル','ベルモント・シニアセンター','女性、ピンク色の髪、巨大な鼻、青いドレス','大声をあげる、ダンス'),
+('スクーター','オークランド病院','男性、青い髪、赤いスーツ、巨大な鼻','ゴム風船'),
+('ジッポ','ミルストンモール','女性、オレンジ色のスーツ、バギーパンツ','ダンス'),
+('ベイブ','アールズオート','女性、きらきら光るピンク一色','綱渡り、小さな車'),
+('ボンゾ','　　','男性、女装、水玉模様のドレス','歌、ダンス'),
+('スニッフルズ','トレイシーズ','男性、緑と紫のスーツ、先のとがった鼻','　　')
+
+insert into clown_info
+values
+('ジッポ','ミルストンモール','女性、オレンジ色のスーツ、バギーパンツ','ダンス、歌');
+
+
+insert into clown_info
+values
+('スナッグルズ','ディクソンパーク','女性、黄色いシャツ、青いバギーパンツ','ホルン、傘');
+
+insert into clown_info
+values
+('ボンゾ','ボールマート','男性、女装、水玉模様のドレス','歌、ダンス'),
+
+insert into clown_info
+values
+('スニッフルズ','トレイシーズ','男性、緑と紫のスーツ、先のとがった鼻','小さな車に乗り込む');
+
+insert into clown_info
+values
+('ミスター・ホボ','ディクソンパーク','男性、青い髪、赤いスーツ、巨大な鼻','ゴム風船');
+
+delete from clown_info
+where
+activities = 'ダンス'
+
+
+delete from drink_info
+where
+drink_name = 'キスオンザリップ';
+
+
+insert into drink_info
+values
+('キスオンザリップス','5.5','42.5','紫','Y','170');
+
+delete from drink_info
+where
+cost = '2.5';
+
+insert into drink_info
+values
+('ライムフィズ','3.5','8.6','金','Y','50');
